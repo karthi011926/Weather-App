@@ -1,4 +1,3 @@
-const apiKey ="ca889e0affec2eb6f797f5dd1e6cfbca";
 
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
@@ -73,8 +72,7 @@ weather.classList.add("show");
 
 async function getWeather(cityName) {
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
-
+        const url = `http://localhost:3000/weather?city=${cityName}`;
     try {
 
         errorMessage.textContent = "";
@@ -107,7 +105,7 @@ async function getWeather(cityName) {
 
 async function getWeatherByLocation(latitude, longitude) {
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    const url = `http://localhost:3000/weather/location?lat=${latitude}&lon=${longitude}`;
 
     const response = await fetch(url);
 
