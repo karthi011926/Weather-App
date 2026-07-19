@@ -72,7 +72,7 @@ weather.classList.add("show");
 
 async function getWeather(cityName) {
 
-        const url = `http://localhost:3000/weather?city=${cityName}`;
+        const url = `https://weather-backend-0rdi.onrender.com/weather?city=${cityName}`;
     try {
 
         errorMessage.textContent = "";
@@ -105,7 +105,7 @@ async function getWeather(cityName) {
 
 async function getWeatherByLocation(latitude, longitude) {
 
-    const url = `http://localhost:3000/weather/location?lat=${latitude}&lon=${longitude}`;
+    const url = `https://weather-backend-0rdi.onrender.com/weather/location?lat=${latitude}&lon=${longitude}`;
 
     const response = await fetch(url);
 
